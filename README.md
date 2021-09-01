@@ -37,8 +37,8 @@ chmod 700 ./install-frps.sh
 ```Bash
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ```
-debian10使用systemd配置开机自启
-
+### debian10使用systemd配置开机自启
+```Bash
 vi /etc/systemd/system/frps.service 新建此文件，并写入以下内容
 
 [Unit]
@@ -54,3 +54,4 @@ WantedBy=multi-user.target
 启动并设为开机自启。
 $ systemctl start frps
 $ systemctl enable frps
+```
